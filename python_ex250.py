@@ -16,7 +16,12 @@ class Orange():
     def rot(self, days, temp):
         self.mold = days * temp
 
-orange = Orange(6, "orange")
+class OdolnyOrange(Orange):
+    def rot(self, days, temp):
+        super().rot(days, temp)
+        self.mold/=3
+
+orange = OdolnyOrange(6, "orange")
 print(orange.mold)
 orange.rot(10, 98)
 print(orange.mold)
