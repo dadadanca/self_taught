@@ -1,4 +1,11 @@
 # Do not run.
+class Shape:
+    def draw(self):
+        pass
+
+class Triangle(Shape):
+    def draw(self):
+        print("I am triangle")
 
 # Drawing shapes
 # w/o polymorphism

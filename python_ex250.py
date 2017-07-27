@@ -14,7 +14,7 @@ class Orange():
         print("Created!")
 
     def rot(self, days, temp):
-        self.mold = days * temp
+        self.mold += days * temp
 
 class OdolnyOrange(Orange):
     def rot(self, days, temp):
@@ -24,4 +24,6 @@ class OdolnyOrange(Orange):
 orange = OdolnyOrange(6, "orange")
 print(orange.mold)
 orange.rot(10, 98)
+print(orange.mold)
+orange.rot(2,98)
 print(orange.mold)

@@ -6,15 +6,21 @@
 
 class Data:
     def __init__(self):
-        self.nums = [1, 2, 3, 4, 5]
+        self._nums = [1, 2, 3, 4, 5]
 
     def change_data(self, index, n):
-        self.nums[index] = n
+        self._nums[index] = n
+
+    def __repr__(self):
+        return "%s"%self._nums
 
 data_one = Data()
-data_one.nums[0] = 100
-print(data_one.nums)
+data_one._nums[0] = 100
+print(data_one._nums)
 
 data_two = Data()
+data_three = data_two
+
 data_two.change_data(0, 100)
-print(data_two.nums)
+print(data_two)
+print(data_three)

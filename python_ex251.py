@@ -7,15 +7,15 @@
 
 class Rectangle():
     def __init__(self, w, l):
-        self.width = w
-        self.len = l
+        self._width = w
+        self._len = l
 
     def area(self):
-        return self.width * self.len
+        return self._width * self._len
 
     def change_size(self, w, l):
-        self.width = w
-        self.len = l
+        self._width = w
+        self._len = l
 
 rectangle = Rectangle(10, 20)
 print(rectangle.area())
